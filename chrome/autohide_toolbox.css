@@ -18,6 +18,13 @@ See the above repository for updates as well as full license text. */
   :root:not([lwtheme]) #navigator-toolbox{ background-color: -moz-dialog !important; }
 }
 
+@media (-moz-platform: linux){
+  :root{
+    --uc-autohide-toolbox-delay: 0ms; /* Delay causes flickering on Wayland */
+    --uc-toolbox-rotation: 50deg; /* Increase hover hitbox for GTK windows */
+  }
+}
+
 :root[sizemode="fullscreen"],
 :root[sizemode="fullscreen"] #navigator-toolbox{ margin-top: 0 !important; }
 
